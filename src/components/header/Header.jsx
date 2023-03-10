@@ -13,7 +13,7 @@ const Header = () => {
 			<HeaderTitle>Social Media Dashboard</HeaderTitle>
 			<HeaderInfo size='1rem'>Total Followers:</HeaderInfo>
 			<HeaderToggleContainer>
-				<HeaderInfo size='0.8rem'>Dark Mode</HeaderInfo>
+				<HeaderInfo size='0.9rem'>Dark Mode</HeaderInfo>
 				<Toggle />
 			</HeaderToggleContainer>
 		</StyledHeader>
