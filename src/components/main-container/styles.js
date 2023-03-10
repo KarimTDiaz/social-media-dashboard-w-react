@@ -1,7 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const StyledMainContainer = styled.div`
+const StyledMainContainer = styled.div``;
 
-`
-
-export {StyledMainContainer}
+export { StyledMainContainer };

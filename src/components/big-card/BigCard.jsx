@@ -1,20 +1,44 @@
-import { BigCardContent, BigCardContentItem, BigCardSocial, BigCardTop, BigCardUser, StyledBigCard } from "./styles"
+import {
+	BigCardBottomInfo,
+	BigCardContent,
+	BigCardAmount,
+	BigCardSocial,
+	BigCardTop,
+	BigCardUser,
+	StyledBigCard,
+	BigCardBottom,
+	BigCardTarget
+} from './styles';
+import Icon from '../icon/Icon';
 
-const BigCard = ({borderColor,social,name,number,target,results}) => {
-    return <StyledBigCard borderColor={borderColor}>
-        <BigCardTop>
-            <BigCardSocial {...social}/>
-            <BigCardUser>{name}</BigCardUser>
-        </BigCardTop>
+const BigCard = ({
+	borderColor,
+	social,
+	name,
+	number,
+	target,
+	results,
+	positive,
+	dark
+}) => {
+	return (
+		<StyledBigCard borderColor={borderColor} dark={dark}>
+			<BigCardTop>
+				<BigCardSocial {...social} />
+				<BigCardUser dark={dark}>{name}</BigCardUser>
+			</BigCardTop>
 
-        <BigCardContent>
-        <BigCardContentItem color='white' size='56px'>{number.toLocaleString('de-DE')}</BigCardContentItem>
-        <BigCardContentItem space='0.4rem' size='12px'>{target}</BigCardContentItem>
-        </BigCardContent>
-
-    </StyledBigCard>
-
-
-   
-}
-export default BigCard
+			<BigCardContent>
+				<BigCardAmount dark={dark}>
+					{number.toLocaleString('de-DE')}
+				</BigCardAmount>
+				<BigCardTarget dark={dark}>{target}</BigCardTarget>
+			</BigCardContent>
+			<BigCardBottom>
+				<Icon state={positive}></Icon>
+				<BigCardBottomInfo positive={positive}>{results}</BigCardBottomInfo>
+			</BigCardBottom>
+		</StyledBigCard>
+	);
+};
+export default BigCard;

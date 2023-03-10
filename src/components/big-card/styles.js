@@ -9,7 +9,9 @@ const StyledBigCard = styled.div`
 	height: 216px;
 	padding: 1rem;
 	text-align: center;
-	background-color: #252b42;
+	background-color: ${({ dark }) => (dark ? '#252b42' : '#F7F9FF')};
+	border-radius: 4px;
+	transition: background-color 0.3s;
 	&::after {
 		content: '';
 		position: absolute;
@@ -18,6 +20,8 @@ const StyledBigCard = styled.div`
 		width: 326px;
 		height: 4px;
 		background: ${({ borderColor }) => borderColor};
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
 	}
 `;
 
@@ -32,18 +36,35 @@ const BigCardSocial = styled.img``;
 const BigCardUser = styled.h2`
 	margin: 0;
 	font-size: 12px;
+	color: ${({ dark }) => (dark ? '#8C98C6' : '#63687D')};
+	transition: background-color 0.3s;
 `;
 
 const BigCardContent = styled.div``;
 
-const BigCardContentItem = styled.p`
+const BigCardAmount = styled.p`
 	margin: 0;
-	font-size: ${({ size }) => size};
-	color: ${({ color }) => color};
+	font-size: 56px;
+	font-weight: 600;
+	color: ${({ dark }) => (dark ? 'white' : '#1D1F29')};
 	letter-spacing: ${({ space }) => space};
 `;
 
+const BigCardTarget = styled.p`
+	margin: 0;
+	font-size: 12px;
+	color: ${({ dark }) => (dark ? '#8C98C6' : '#63687D')};
+	transition: background-color 0.3s;
+	letter-spacing: 0.4rem;
+`;
+
 const BigCardBottom = styled.div``;
+const BigCardBottomInfo = styled.span`
+	color: ${({ positive }) => (positive ? '#1EB589' : '#DC414C')};
+	font-weight: 600;
+	font-size: 12px;
+	margin-left: 10px;
+`;
 
 export {
 	StyledBigCard,
@@ -51,6 +72,8 @@ export {
 	BigCardSocial,
 	BigCardUser,
 	BigCardContent,
-	BigCardContentItem,
-	BigCardBottom
+	BigCardAmount,
+	BigCardBottom,
+	BigCardBottomInfo,
+	BigCardTarget
 };

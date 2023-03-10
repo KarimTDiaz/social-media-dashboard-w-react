@@ -7,14 +7,14 @@ import {
 	StyledHeader
 } from './styles';
 
-const Header = () => {
+const Header = ({ dark, setDark }) => {
 	return (
-		<StyledHeader>
-			<HeaderTitle>Social Media Dashboard</HeaderTitle>
+		<StyledHeader dark={dark}>
+			<HeaderTitle dark={dark}>Social Media Dashboard</HeaderTitle>
 			<HeaderInfo size='1rem'>Total Followers:</HeaderInfo>
 			<HeaderToggleContainer>
 				<HeaderInfo size='0.9rem'>Dark Mode</HeaderInfo>
-				<Toggle />
+				<Toggle dark={dark} setDark={setDark} />
 			</HeaderToggleContainer>
 		</StyledHeader>
 	);

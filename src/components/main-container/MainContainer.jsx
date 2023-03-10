@@ -1,12 +1,14 @@
 import BigCardContainer from '../big-cards-container/BigCardsContainer';
 import Header from '../header/Header';
+import SmallCardsContainer from '../small-cards-container/SmallCardsContainer';
 import { StyledMainContainer } from './styles';
 
-const MainContainer = () => {
+const MainContainer = ({ dark, setDark }) => {
 	return (
-		<StyledMainContainer>
-			<Header></Header>
-			<BigCardContainer/>
+		<StyledMainContainer dark={dark}>
+			<Header dark={dark} setDark={setDark}></Header>
+			<BigCardContainer dark={dark} />
+			<SmallCardsContainer dark={dark} />
 		</StyledMainContainer>
 	);
 };
