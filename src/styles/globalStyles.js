@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     margin: 0;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 	font-family: 'Inter', sans-serif;
 	background-color: ${({ dark }) => (dark ? '#1D1F29' : 'white')}; 
     transition: background-color 0.3s;

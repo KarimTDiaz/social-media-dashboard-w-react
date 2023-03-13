@@ -23,6 +23,13 @@ const StyledBigCard = styled.div`
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
 	}
+	@media screen and (min-width: 768px) {
+		width: 255px;
+		height: 216px;
+		&::after {
+			width: 255px;
+		}
+	}
 `;
 
 const BigCardTop = styled.div`
@@ -47,7 +54,6 @@ const BigCardAmount = styled.p`
 	font-size: 56px;
 	font-weight: 600;
 	color: ${({ dark }) => (dark ? 'white' : '#1D1F29')};
-	letter-spacing: ${({ space }) => space};
 `;
 
 const BigCardTarget = styled.p`

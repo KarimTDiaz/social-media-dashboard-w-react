@@ -35,7 +35,7 @@ const BIG_CARDS_INFO = [
 	},
 	{
 		id: v4(),
-		borderColor: '#178FF5',
+		borderColor: '#C4032B',
 		social: ICONS.youtube,
 		name: 'Nathan F.',
 		number: 8239,
